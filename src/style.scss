@@ -1,0 +1,14 @@
+$darkBlue : #0000AA;
+$backgroundColor : #FFAAAA;
+$font-stack : Helvetica, sans-serif;
+
+
+body {
+  font : 100% $font-stack;
+  color: $darkBlue;
+  background-color: $backgroundColor;
+}
+
+ul {
+  color : $darkBlue;
+}

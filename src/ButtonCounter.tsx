@@ -2,6 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import {useEffect} from 'react';
 import {useContext} from 'react';
+import './Button.css';
 
 const CounterContext = React.createContext({
   clickCount : 0,
@@ -36,14 +37,14 @@ const Button : React.FC = () => {
   const context = useContext(CounterContext);
 
   return(
-    <button onClick={context.incrementCount}> Click Me, Daddy! (UWU) </button>
+    <button onClick={context.incrementCount} className="Button.css"> Click Me, Daddy! (UWU) </button>
   );
 }
 
 const Message : React.FC = () => {
   return(
     <div>
-      <p>You have satisfied the button <Counter/> times!</p>
+      <p className="Button.css">You have satisfied the button <Counter/> times!</p>
     </div>
   );
 }

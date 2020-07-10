@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+
 import {Template2p1i} from './Templates';
 //import {ButtonClicker} from './ButtonClicker';
 import {ButtonCounter} from "./ButtonCounter";
@@ -18,21 +20,34 @@ const NASAinfo : React.FC = () => {
 //export {NASAinfo};
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ButtonCounter/>
-        <NASAinfo/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          The World shall crumble before me
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <body className="App.css">
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to = "/about-nasa"> About NASA </Link>
+              </li>
+              <li>
+                <Link to = "/lewd-button"> Lewd Button </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        </body>
+
+        <Switch>
+          <Route path = "/about-nasa">
+            <NASAinfo/>
+          </Route>
+          <Route path = "/lewd-button">
+            <ButtonCounter/>
+          </Route>
+        </Switch>
+      </div>
+
+    </Router>
   );
 }
 export default App;

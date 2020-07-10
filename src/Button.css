@@ -1,0 +1,16 @@
+button {
+  background-color: #AA0000;
+  border: 4px solid #550055;
+  color: #FFFF22;
+  text-align: center;
+  font-size: 16px;
+  cursor: grabbing;
+  padding: 10px 10px;
+  border-radius: 6px;
+}
+
+p {
+  color: #AA0000;
+}
+
+/*# sourceMappingURL=Button.css.map */
